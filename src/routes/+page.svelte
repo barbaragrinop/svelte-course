@@ -1,6 +1,8 @@
 <script>
-    import DisplayName from "$lib/components/DisplayName.svelte";
+    // import DisplayName from "$lib/components/DisplayName.svelte";
+    import RandomNumber from "$lib/components/RandomNumber.svelte";
 
 </script>
-<DisplayName />
-<h1>teste</h1>
+<RandomNumber />
+<!-- <DisplayName />
+<h1>teste</h1> -->
