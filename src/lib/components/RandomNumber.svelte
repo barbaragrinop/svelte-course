@@ -17,9 +17,9 @@
     })
 
     //quando o componente é destruído
-    onDestroy(() => {
-        console.log('onDestroy ')
-    })
+    // onDestroy(() => {
+    //     console.log('onDestroy ')
+    // })
 
     // pre function runs before DOM updates
     $effect.pre(() => { 
