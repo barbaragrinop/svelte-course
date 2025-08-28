@@ -12,7 +12,7 @@
 </script>
  
 
-<button>
+<button >
     {#if left}
         <div 
             role="presentation"
@@ -36,7 +36,7 @@
     <!-- {@render left?.()} -->
 </button> 
 
-<style>
+<style lang="scss">
     button {
         padding: 10px 20px;
         font-size: 16px;
