@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
     import Button from "$lib/components/Button.svelte";
-    import { Search, Clipboard } from 'lucide-svelte';
+    import { Search, Clipboard, AlarmClockMinusIcon } from 'lucide-svelte';
     // import Counter from "$lib/components/Counter.svelte";
     // import DisplayName from "$lib/components/DisplayName.svelte";
     // import RandomNumber from "$lib/components/RandomNumber.svelte";
@@ -11,12 +11,21 @@
 <h1>teste</h1> -->
 <!-- <Counter /> -->
 
-{#snippet buttonLeft()}
-    <Search />
-{/snippet}
 
-{#snippet buttonRight()}
-    <Clipboard />
-{/snippet}
+<Button>
+    {#snippet left(isHovered: boolean)}
+        {#if isHovered}
+            <Search />
+        {:else}
+            <AlarmClockMinusIcon />
+        {/if}
+    {/snippet}
 
-<Button left={buttonLeft} right={buttonRight}>text</Button>
+    {#snippet children()}
+        Hover Me
+    {/snippet}
+
+    {#snippet right()}
+        <Clipboard />
+    {/snippet}
+</Button>

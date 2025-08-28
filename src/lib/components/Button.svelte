@@ -1,18 +1,30 @@
 <script lang="ts">
     import type { Snippet } from 'svelte';
     interface Props {
-        left?: Snippet;
+        left?: Snippet<[boolean]>;
         right?: Snippet;
         children: Snippet;
     }
     
     let { left, right, children }: Props = $props();
+
+    let isLeftHover = $state<boolean>(false)
 </script>
  
+
 <button>
     {#if left}
-        <div class="left-content">
-            {@render left()}
+        <div 
+            role="presentation"
+            class="left-content" 
+            onmouseenter={() => {
+                isLeftHover = true
+            }}
+            onmouseleave={() => {
+                isLeftHover = false
+            }}
+        >
+            {@render left(isLeftHover)}
         </div>
     {/if}
     {@render children()}
