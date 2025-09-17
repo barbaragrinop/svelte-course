@@ -12,7 +12,7 @@
 <!-- <Counter /> -->
 
 
-<Button>
+<Button shadown size="large">
     {#snippet left(isHovered: boolean)}
         {#if isHovered}
             <Search />
