@@ -15,10 +15,12 @@
  
 
 <button 
-    class:small={size === 'small'} 
-    class:large={size === 'large'}  
-    class:medium={size === 'medium'}
-    class:shadown={shadown}
+  class={{
+    small: size === 'small',
+    medium: size === 'medium',
+    large: size === 'large',
+    shadown: shadown
+  }}
 >
     {#if left}
         <div 
@@ -70,7 +72,7 @@
         }
 
         &.small {
-            font-size: 12px;
+            font-size: 10px;
             padding: 6px 12px;
         }
 
@@ -80,7 +82,7 @@
         }
 
         &.large {
-            font-size: 20px;
+            font-size: 25px;
             padding: 14px 28px;
         }
 
